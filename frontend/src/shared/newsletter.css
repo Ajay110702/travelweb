@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff7e01;
+  --secondary-color: #faa935;
+  --heading-color: #0b2727;
+  --text-color: #6e7074;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Island Moments", cursive;
+}
+.newsletter{
+    background: #cae5f4;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.newsletter_img img{
+    width:100%;
+}
+.newsletter_content{
+    padding: 50px 0;
+}
+
+.newsletter_content h2{
+    font-size: 2.4rem;
+    margin-bottom: 1.8rem;
+}
+
+.newsletter_input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffff;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+}
+
+.newsletter_input input{
+    border: none;
+    font-size: 1rem;
+    color:var(--heading-color);
+}
+
+.newsletter_input input:focus{
+outline: none;
+}
+
+.newsletter_btn{
+    padding: 0.5rem 1.5rem !important;
+    background: var(--secondary-color) !important;
+    color:#ffff;
+    font-size: 1.2rem !important;
+}
+
+.newsletter_content p{
+    color:grey;
+    font-size:1rem;
+}
+
+
+@media only screen and (max-width:992px){
+    .newsletter_content h2{
+     font-size: 2rem;
+
+    }
+    .newsletter_img{
+    display: none;
+}
+}
+
+  
+
+@media only screen and (max-width:576px){
+    .newsletter_content h2{
+     font-size: 1.5rem;
+     
+    }
+   
+    .newsletter_content p{
+        display: none;
+    }
+}

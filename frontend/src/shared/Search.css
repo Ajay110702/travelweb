@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff7e01;
+  --secondary-color: #faa935;
+  --heading-color: #0b2727;
+  --text-color: #6e7074;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Island Moments", cursive;
+}
+
+.searchbar{
+    padding:0.5rem 1rem;
+    border-radius: 50px;
+    box-shadow: rgba(17,12,46,0.15) 0px 48px 100px 0px;
+    width: max-content;
+} 
+
+.formgroup span{
+font-size:1.7rem;
+    color:var(--secondary-color);
+
+}
+
+.formgroup input{
+border:none;
+font-size: 0.9rem;
+color:var(--heading-color); 
+font-weight:500;
+}
+
+.formgroup input:focus{
+outline:none;
+  /* background-color:#ee6e6e6e; */
+}
+
+.formgroup h6{
+margin-bottom: 0;
+}
+
+.formgroup-fast{
+  border-right: 2px solid #ddd;
+}
+
+.search_icon{
+  font-size: 1.5rem;
+  padding:0.5rem;
+  background:var(--secondary-color);
+  color:#fff;
+  border-radius:10px 5px 10px 5px ;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:992px) {
+  .searchbar{
+    width: 100%;
+    border-radius: 2rem;
+  }
+  .searchbar form{
+    flex-wrap: wrap;
+  }
+
+  .searchbar form .formgroup{
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width:576px){
+  .searchbar form .formgroup{
+    width: 100%;
+
+  }
+
+  .formgroup input{
+    font-size: 0.7rem;
+  }
+  .formgroup span i{
+    font-size: 1.1rem;
+  }
+  .formgroup h6{
+    font-size: 1rem;
+  }
+}
