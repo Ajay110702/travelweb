@@ -24,8 +24,6 @@
 //  export default ThankYou;
 
 
-
-
 import React from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -63,5 +61,6 @@ const ThankYou = () => {
     </section>
   );
 };
+
 
 export default ThankYou;
