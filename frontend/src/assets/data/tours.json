@@ -1,0 +1,160 @@
+[
+  {
+    "title": "Munnar",
+    "city":"Munnar, Kerela",
+    "address": "Somewhere in Kerela",
+    "distance": 7000,
+    "price": 600,
+    "maxGroupSize": 10,
+    "desc": "Munnar is a beautiful hill station located in the Idukki district of Kerala, India. Known for its scenic landscapes, lush tea gardens, and pleasant climate, Munnar is a popular tourist destination",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img01.jpg",
+    "featured": true
+  },
+  {
+    "title": "Shimla",
+    "city": "Shimla, himachal Pradesh",
+    "address": "Somewhere in Himachal Pradesh",
+    "distance": 200,
+    "price": 400,
+    "maxGroupSize": 8,
+    "desc": "Shimla, the capital city of Himachal Pradesh, is one of the most popular hill stations in India. Known for its colonial architecture, pleasant climate, and scenic landscapes, Shimla attracts tourists from all over the world.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img02.jpg",
+    "featured": true
+  },
+  {
+    "title": "Dal lake",
+    "city": "Jammu and kashmir, India",
+    "address": "Somewhere in Jammu and kashmir",
+    "distance": 2900,
+    "price": 2500,
+    "maxGroupSize": 8,
+    "desc": "Dal Lake, located in Srinagar, the summer capital of Jammu and Kashmir.Known for its stunning beauty, serene environment, and vibrant houseboats, Dal Lake offers a unique and unforgettable experience.",
+      "reviews": [],
+
+    "photo": "/tour-images/tour-img03.jpg",
+    "featured": true
+  },
+  {
+    "title": "Paradise beach",
+    "city": "Pondicherry, India",
+    "address": "Somewhere in Pondicherry",
+    "distance": 2950,
+    "price": 2800,
+    "maxGroupSize": 8,
+    "desc": "Paradise Beach is  one of the most beautiful and popular beaches in Pondicherry.this pristine beach is known for its golden sands, clear blue waters, and serene atmosphere.  ",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img04.jpg",
+    "featured": true
+  },
+  {
+    "title": "Tea Garden",
+    "city": "Assam, India",
+    "address": "Somewhere in Assam",
+    "distance": 5000,
+    "price": 450,
+    "maxGroupSize": 8,
+    "desc": "Assam, known as the Land of the Rising Sun, is a northeastern state of India famous for its natural beauty, wildlife, tea plantations, and rich cultural heritage.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img05.jpg",
+    "featured": true
+  },
+  {
+    "title": "Rishikesh",
+    "city": "Rishikesh, Uttrakhand",
+    "address": "Somewhere in uttrakhand",
+    "distance": 500,
+    "price": 2000,
+    "maxGroupSize": 8,
+    "desc": "Rishikesh, located in the state of Uttarakhand, is a renowned spiritual and adventure destination. Known as the Yoga Capital of the World, Rishikesh attracts visitors for its serene environment, yoga retreats, and thrilling adventure sports.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img06.png",
+    "featured": true
+  },
+  {
+    "title": "Golden Temple",
+    "city": "Amritsar, Punjab",
+    "address": "Somewhere in Punjab",
+    "distance": 400,
+    "price": 250,
+    "maxGroupSize": 8,
+    "desc":  "The Golden Temple, also known as Harmandir Sahib, is the holiest shrine in Sikhism and one of the most iconic landmarks in India. Located in Amritsar, Punjab, the Golden Temple attracts millions of visitors each year for its spiritual significance, stunning architecture, and serene environment. ",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img07.jpg",
+    "featured": true
+  },
+
+  {
+    "title": "Andaman and Nicobar islands",
+    "city": "Indian Ocean",
+    "address": "Somewhere in Indian Ocean",
+    "distance": 2500,
+    "price": 300,
+    "maxGroupSize": 10,
+    "desc": "The Andaman and Nicobar Islands, located in the Bay of Bengal, are a tropical paradise known for their stunning beaches, crystal-clear waters, vibrant coral reefs, and rich history. ",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img08.jpg",
+    "featured": true
+  },
+  
+  {
+    "title": "Taj Mahal",
+    "city": "Agra, Uttar Pradesh",
+    "address": "Somewhere in Uttar Pradesh",
+    "distance": 800,
+    "price": 1500,
+    "maxGroupSize": 8,
+    "desc": "The Taj Mahal, located in Agra, Uttar Pradesh, is one of the most iconic and beautiful monuments in the world. Built by the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img09.jpg",
+    "featured": false
+  },
+  {
+    "title": "darjeeling",
+    "city": "Darjeeling, WestBengal",
+    "address": "Somewhere in West Bengal",
+    "distance": 3000,
+    "price": 200,
+    "maxGroupSize": 10,
+    "desc": "Darjeeling, located in the state of West Bengal, is one of India's most famous hill stations. Nestled in the foothills of the Himalayas, Darjeeling is renowned for its stunning landscapes, tea gardens and  colonial architecture.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img10.jpg",
+    "featured": false
+  },
+  {
+    "title": "Vrindavan",
+    "city": "Vrindavan, uttar Pradesh",
+    "address": "Somewhere in Uttar Pradesh",
+    "distance": 1000,
+    "price": 500,
+    "maxGroupSize": 8,
+    "desc": "Vrindavan, located in the Mathura district of Uttar Pradesh, is one of the most sacred towns in India for devotees of Lord Krishna. It is believed to be the place where Krishna spent his childhood and performed many of his divine leelas (pastimes). ",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img11.jpg",
+    "featured": false
+  },
+  {
+    "title": "Hawa Mahal, Jaipur",
+    "city": "India",
+    "address": "Somewhere in Jaipur",
+    "distance": 3000,
+    "price": 80,
+    "maxGroupSize": 8,
+    "desc": "Jaipur, the capital city of Rajasthan, is known as the Pink City due to the distinctive pink color of its buildings. It is a vibrant blend of history, culture, and architectural marvels.",
+    "reviews": [],
+
+    "photo": "/tour-images/tour-img12.jpg",
+    "featured": true
+  }
+]
