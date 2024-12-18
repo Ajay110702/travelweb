@@ -6,7 +6,7 @@ import TourDetails from './../pages/TourDetails';
 import Login from './../pages/Login';
 import Register from './../pages/Register';
 import SearchResult from './../pages/SearchResult';
-import PaymentPage from '../pages/Payment';
+// import PaymentPage from '../pages/Payment';
 import ThankYou from '../pages/ThankYou';
 const Routers = () => {
   return (
@@ -18,7 +18,7 @@ const Routers = () => {
      <Route path='/login' element={<Login/>}/>
      <Route path='/register' element={<Register/>}/>
      <Route path='/thank-you' element={<ThankYou/>}/>
-     <Route path="/payment" element={<PaymentPage />} />
+     {/* <Route path="/payment" element={<PaymentPage />} /> */}
      <Route path='/tours/search' element={<SearchResult/>}/>
 
      </Routes>
