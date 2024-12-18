@@ -12,10 +12,10 @@ import reviewRoute from './routes/reviews.js'
  dotenv.config()
  const app=express()
 const port = process.env.PORT || 4000
-// const corsOptions = {
-//   origin:true,
-//   credentials:true
-// }
+const corsOptions = {
+  origin:true,
+  credentials:true
+}
 //database connection
 mongoose.set('strictQuery', false);
 const connect=async()=>{
@@ -33,8 +33,7 @@ const connect=async()=>{
 
 //middleware 
 app.use(express.json()) 
-app.use(cors())
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 app.use(cookieParser())
 app.use('/api/v1/auth', authRoute)
 app.use('/api/v1/tours',tourRoute)
