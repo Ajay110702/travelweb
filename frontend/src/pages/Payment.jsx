@@ -43,7 +43,7 @@ const PaymentForm = () => {
       }
 
       // Simulate a successful payment for demonstration
-      toast.success('Payment successful!', {
+      toast.success('Payment Successful !! Congratulations Your Tour is booked now..', {
         position: 'top-center',
         autoClose: 3000,
         theme: 'colored',
