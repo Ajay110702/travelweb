@@ -1,148 +1,90 @@
 
+
 import React, { useState } from 'react';
-import '../styles/PaymentPage.css';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../styles/PaymentPage.css';
 
-const PaymentPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    cardNumber: '',
-    expiryDate: '',
-    cvv: '',
-  });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+const stripePromise = loadStripe('pk_test_51Q5SxnLAKWnNOXZfnKlSKMoV4c7sAyVr385hLMC7U78sc8cD11gLPdsHRL0slKCuXh0WLRdGgLom0EAkNTTXfARd00wZsZJJaW');
+ // Replace with your Stripe publishable key
 
-  const handlePayment = (e) => {
+const PaymentForm = () => {
+  const stripe = useStripe();
+  const elements = useElements();
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const { name, cardNumber, expiryDate, cvv } = formData;
-    if (!name || !cardNumber || !expiryDate || !cvv) {
-      toast.error('Please fill out all fields with valid information.', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+    if (!stripe || !elements) {
       return;
     }
 
-    if (cardNumber.length !== 16 || isNaN(cardNumber)) {
-      toast.error('Card number must be 16 digits.', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-      return;
-    }
+    const cardElement = elements.getElement(CardElement);
 
-    if (cvv.length !== 3 || isNaN(cvv)) {
-      toast.error('CVV must be 3 digits.', {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
+    setLoading(true);
+    try {
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: cardElement,
       });
-      return;
-    }
 
-    toast.success('Payment Successful!', {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
+      if (error) {
+        toast.error(`Payment failed: ${error.message}`, {
+          position: 'top-center',
+          autoClose: 3000,
+          theme: 'colored',
+        });
+        setLoading(false);
+        return;
+      }
+
+      // Simulate a successful payment for demonstration
+      toast.success('Payment successful!', {
+        position: 'top-center',
+        autoClose: 3000,
+        theme: 'colored',
+      });
+
+      console.log('PaymentMethod:', paymentMethod);
+      setLoading(false);
+    } catch (err) {
+      toast.error(`Payment failed: ${err.message}`, {
+        position: 'top-center',
+        autoClose: 3000,
+        theme: 'colored',
+      });
+      setLoading(false);
+    }
   };
 
   return (
     <div className="payment-page">
       <div className="payment-card">
         <h1 className="payment-title">Payment Details</h1>
-        <p className="payment-description">Securely complete your transaction</p>
-        <form className="payment-form" onSubmit={handlePayment}>
+        <p className="payment-description">Securely complete your transaction using Stripe</p>
+        <form onSubmit={handleSubmit} className="payment-form">
           <div className="form-group">
-            <label htmlFor="name">Name on Card</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="John Doe"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-            />
+            <label htmlFor="card-element">Card Details</label>
+            <CardElement id="card-element" className="card-input" />
           </div>
-
-          <div className="form-group">
-            <label htmlFor="cardNumber">Card Number</label>
-            <input
-              type="text"
-              id="cardNumber"
-              name="cardNumber"
-              placeholder="1234 5678 9012 3456"
-              maxLength="16"
-              value={formData.cardNumber}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-
-          <div className="form-row">
-            <div className="form-group half-width">
-              <label htmlFor="expiryDate">Expiration Date</label>
-              <input
-                type="text"
-                id="expiryDate"
-                name="expiryDate"
-                placeholder="MM/YY"
-                value={formData.expiryDate}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            <div className="form-group half-width">
-              <label htmlFor="cvv">CVV</label>
-              <input
-                type="password"
-                id="cvv"
-                name="cvv"
-                placeholder="123"
-                maxLength="3"
-                value={formData.cvv}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-
-          <button type="submit" className="submit-button">Pay Now</button>
+          <button type="submit" className="submit-button" disabled={!stripe || loading}>
+            {loading ? 'Processing...' : 'Pay Now'}
+          </button>
         </form>
       </div>
       <ToastContainer />
     </div>
   );
 };
+
+const PaymentPage = () => (
+  <Elements stripe={stripePromise}>
+    <PaymentForm />
+  </Elements>
+);
 
 export default PaymentPage;
