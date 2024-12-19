@@ -7,7 +7,7 @@ const servicesData =[
   desc:'You can book the travel places according to your budget.'
   },
   {
-    title:'Location Information',
+    title:'Local Information',
     desc:'We provide information on the travel places via maps.'
   },
   {
