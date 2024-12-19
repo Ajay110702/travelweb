@@ -72,7 +72,7 @@ const tour = [
     title: "Dal lake",
     city: "Jammu and kashmir, India",
     distance: 2900,
-    price: 2500,
+    price: 3000,
     maxGroupSize: 8,
     desc: "Dal Lake, located in Srinagar, the summer capital of Jammu and Kashmir.Known for its stunning beauty, serene environment, and vibrant houseboats, Dal Lake offers a unique and unforgettable experience.",
     reviews: [
