@@ -1,1 +1,1 @@
-A full-stack food delivery platform, enabling users to browse restaurants, place orders and track deliveries.
+Tour thrive is a platform to plan trips, integrating APIs for location data and user profiles.
