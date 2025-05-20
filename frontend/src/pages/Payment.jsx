@@ -7,10 +7,12 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/PaymentPage.css'
+import {useNavigate} from 'react-router-dom'
 
 const stripePromise = loadStripe('pk_test_51Q5SxnLAKWnNOXZfnKlSKMoV4c7sAyVr385hLMC7U78sc8cD11gLPdsHRL0slKCuXh0WLRdGgLom0EAkNTTXfARd00wZsZJJaW'); // Replace with your Stripe publishable key
 
 const PaymentForm = () => {
+const navigate=useNavigate();
   const stripe = useStripe();
   const elements = useElements();
 
@@ -45,6 +47,9 @@ const PaymentForm = () => {
       });
 
       console.log('Payment successful:', paymentMethod);
+      setTimeout(() => {
+        navigate('/');
+      }, 3000);
     } catch (error) {
       toast.error(`Error: ${error.message}`, {
         position: 'top-center',

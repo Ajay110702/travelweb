@@ -8,7 +8,7 @@ import NewsLetter from '../shared/Newsletter'
 
 import { useParams } from 'react-router-dom';
 import useFetch from '../hooks/useFetch';
-import { BASE_URL } from '../utils/config';
+import { BASE_URL } from '../utils/config.js';
 import { AuthContext } from '../context/AuthContext';
 const TourDetails = () => {
   const {id} =useParams();
