@@ -45,6 +45,7 @@ body {
   .about-content p {
     margin-bottom: 15px;
     font-size: 1.1rem;
+    color:black;
   }
   
   .about-btn {
